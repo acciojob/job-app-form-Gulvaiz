@@ -2,49 +2,55 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Semantic Tables and Media</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Job Application Form</title>
 </head>
 <body>
-    <table>
-        <thead>
-            <tr>
-                <th>Roll number</th>
-                <th>Name</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>001</td>
-                <td>Gulvaiz</td>
-            </tr>
-            <tr>
-                <td>002</td>
-                <td>Alam</td>
-            </tr>
-            <tr>
-                <td>003</td>
-                <td>Accio</td>
-            </tr>
-        </tbody>
-    </table>
+    <form method="post">
+        <label for="name">Name*: </label>
+        <input type="text" id="name" name="name" required><br><br>
 
-    <h1>List of Medias</h1>
+        <label for="email">Email*: </label>
+        <input type="email" id="email" name="email" required><br><br>
 
-    <ol>
-        <li><img src="https://picsum.photos/id/123/200/300" alt="Random Image"></li>
-        <li>
-            <video controls width="200px">
-                <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4">
-                Your browser does not support the video tag.
-            </video>
-        </li>
-        <li>
-            <audio controls>
-                <source src="http://commondatastorage.googleapis.com/codeskulptor-assets/Epoq-Lepidoptera.ogg">
-                Your browser does not support the audio tag.
-            </audio>
-        </li>
-    </ol>
+        <fieldset>
+            <legend>Gender*:</legend>
+            <label for="male">
+                <input type="radio" id="male" name="gender" value="male" required>
+                Male
+            </label>
+            <label for="female">
+                <input type="radio" id="female" name="gender" value="female" required>
+                Female
+            </label>
+            <label for="other">
+                <input type="radio" id="other" name="gender" value="other" required>
+                Other
+            </label>
+        </fieldset>
+        <br>
+
+        <label for="laptop">Laptop Brands: </label>
+        <select id="laptop" name="laptop">
+            <option value="Apple">Apple</option>
+            <option value="Asus">Asus</option>
+            <option value="HP">HP</option>
+        </select>
+        <br><br>
+
+        <label for="age">Age*: </label>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <label for="dob">Date of Birth*: </label>
+        <input type="date" id="dob" name="dob" required><br><br>
+
+        <label for="password">Password*: </label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="portfolio">Portfolio URL: </label>
+        <input type="url" id="portfolio" name="portfolio"><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
+
